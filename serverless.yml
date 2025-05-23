@@ -1,5 +1,4 @@
 service: fleet-vitals-backend
-
 frameworkVersion: '4'
 
 provider:
@@ -7,10 +6,19 @@ provider:
   runtime: nodejs18.x
   region: us-east-1
 
+package:
+  individually: true
+  include:
+    - dist/**
+    - node_modules/**
+
 functions:
   hello:
-    handler: handler.hello
+    handler: dist/handler.hello
     events:
       - httpApi:
           path: /
           method: get
+
+plugins:
+  - serverless-offline

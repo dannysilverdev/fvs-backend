@@ -91,9 +91,9 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-us-east-1-e469ae14-d620",
-          "S3Key": "serverless/fleet-vitals-backend/dev/1745870661724-2025-04-28T20:04:21.724Z/fleet-vitals-backend.zip"
+          "S3Key": "serverless/fleet-vitals-backend/dev/1747269570270-2025-05-15T00:39:30.270Z/hello.zip"
         },
-        "Handler": "handler.hello",
+        "Handler": "dist/handler.hello",
         "Runtime": "nodejs18.x",
         "FunctionName": "fleet-vitals-backend-dev-hello",
         "MemorySize": 1024,
@@ -109,14 +109,14 @@
         "HelloLogGroup"
       ]
     },
-    "HelloLambdaVersionygfFFyiFdotcJI2o8YdWrOl8cecW9dTVOm7DsRpKA": {
+    "HelloLambdaVersion2jgEFi9LObgFxweKxC9aSQ9m0lpOfQ7fXq3CCZ9ofI": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "HelloLambdaFunction"
         },
-        "CodeSha256": "xcyxn85QTmn5a4YaeV2/du77oFklnWHOjdKq46l7dOY="
+        "CodeSha256": "D6UQj21okhW3M3jDcIX+2/5TeVDztFEhX5bKLOlFpw4="
       }
     },
     "HttpApi": {
@@ -225,7 +225,7 @@
     "HelloLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "HelloLambdaVersionygfFFyiFdotcJI2o8YdWrOl8cecW9dTVOm7DsRpKA"
+        "Ref": "HelloLambdaVersion2jgEFi9LObgFxweKxC9aSQ9m0lpOfQ7fXq3CCZ9ofI"
       },
       "Export": {
         "Name": "sls-fleet-vitals-backend-dev-HelloLambdaFunctionQualifiedArn"

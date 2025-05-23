@@ -1,15 +1,19 @@
 {
-  "name": "fvs-backend",
+  "name": "fleet-vitals-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "deploy": "npm run build && npx serverless deploy",
+    "remove": "npx serverless remove",
+    "dev": "npm run build && npx serverless offline"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "aws-lambda": "^1.0.7"
+  },
   "devDependencies": {
-    "serverless": "^4.14.1"
+    "@types/aws-lambda": "^8.10.149",
+    "serverless": "^4.0.0",
+    "serverless-offline": "^14.4.0",
+    "typescript": "^5.3.3"
   }
 }
